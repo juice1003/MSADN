@@ -52,7 +52,7 @@ train_data = MinimalDataset(Train_Data, Train_Label)
 test_data = MinimalDataset(Test_Data, Test_Label)
 
 criterion = nn.CrossEntropyLoss()#定义损失函数
-optimer = optim.Adam(model.parameters(),  lr=0.0001, weight_decay=0.0008)#优化器用于更新参数权重
+optimer = optim.Adam(model.parameters(),  lr=0.0001, weight_decay=0.0008)
 
 
 train_data_loader = DataLoader(train_data, batch_size=32, shuffle=True, collate_fn=collate_fn)
